@@ -68,6 +68,16 @@ channel.$on('hideTabbar', () => {
     document.body.removeChild(_vm.$el)
   }
 })
+channel.$on('visibleTabbar',()=>{
+  if(_vm){
+    _vm.visibleTabbar();
+  }
+});
+channel.$on('unVisibleTabbar',()=>{
+  if(_vm){
+    _vm.unVisibleTabbar();
+  }
+});
 
 channel.$on('updateTabbarBadge', (menuIndex, num) => {
   if (_vm) {

@@ -97,6 +97,12 @@
       show() {
         this.state = 1
       },
+      visibleTabbar(){
+        this.state=1;
+      },
+      unVisibleTabbar(){
+        this.state=0;
+      },
 
       getIconClass(menu, index) {
         let iconClass = {}
