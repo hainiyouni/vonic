@@ -103,7 +103,6 @@
       unVisibleTabbar(){
         this.state=0;
       },
-
       getIconClass(menu, index) {
         let iconClass = {}
         iconClass['icon ' + menu.iconOn] = this.menuIndex == index

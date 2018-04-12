@@ -3,15 +3,7 @@ import Vue from 'vue'
 import Tabbar from './Tabbar'
 import channel from './channel'
 
-const createElement = (marker, tag) => {
-  let el = document.createElement(tag || 'div')
-  el.setAttribute(marker, '')
-
-  let vonModalClickBlock = document.querySelector('[von-modal-click-block]')
-  vonModalClickBlock
-    ? document.body.insertBefore(el, vonModalClickBlock)
-    : document.body.appendChild(el)
-}
+import {createElement} from '../utils'
 
 let _vm = undefined;
 
@@ -68,6 +60,7 @@ channel.$on('hideTabbar', () => {
     document.body.removeChild(_vm.$el)
   }
 })
+
 channel.$on('visibleTabbar',()=>{
   if(_vm){
     _vm.visibleTabbar();
@@ -85,4 +78,4 @@ channel.$on('updateTabbarBadge', (menuIndex, num) => {
   }
 })
 
-export default window.$tabbarEmmiter = channel
+window.$tabbar = window.$tabbarEmmiter = channel
