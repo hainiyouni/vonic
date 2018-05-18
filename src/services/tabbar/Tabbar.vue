@@ -1,5 +1,5 @@
 <template>
-  <div class="tabbar" :class="{'visible': state == 1}">
+  <div class="tabbar" :class="{'visible': state == 1,'hide':state===0}">
     <div v-for="(menu, index) in menus"
          class="tabbar-item"
          :style="{'color': menuIndex == index ? activeMenuColor : menuColor}"

@@ -71,6 +71,11 @@ channel.$on('unVisibleTabbar',()=>{
     _vm.unVisibleTabbar();
   }
 });
+channel.$on('updateTabbarIndex',(index)=>{
+  if(_vm){
+    _vm.activate(index);
+  }
+});
 
 channel.$on('updateTabbarBadge', (menuIndex, num) => {
   if (_vm) {
