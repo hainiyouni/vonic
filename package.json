@@ -1,6 +1,6 @@
 {
   "name": "vonic-edu",
-  "version": "2.0.2-beta.19-edu0.5",
+  "version": "2.0.4-beta.23-edu0.6",
   "main": "dist/vonic.min.js",
   "description": "Mobile UI Components, based on Vue.js and ionic CSS.",
   "keywords": [

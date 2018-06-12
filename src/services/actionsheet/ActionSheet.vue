@@ -2,7 +2,7 @@
   <div class="action-sheet-backdrop" :class="{'active': state == 1}" @click="hide(-1)">
     <div class="action-sheet-wrapper" :class="{'action-sheet-up': state == 1}">
       <div class="action-sheet">
-        <div class="action-sheet-group">
+        <div class="action-sheet-group"  style="max-height: 360px;overflow-y: auto;-webkit-overflow-scrolling : touch;overflow-scrolling:touch; ">
           <div class="action-sheet-title">
             <span v-text="title"></span>
           </div>
